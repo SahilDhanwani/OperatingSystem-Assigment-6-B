@@ -27,9 +27,10 @@ int main()
     }
 
     int k = 0;
+    int j;
     for (int i = 0; i < m; i++)
     {
-        for (int j = k; j < n; j++)
+        for (j = k; j < n; j++)
         {
             if (free[j] >= process[i])
             {
@@ -40,7 +41,8 @@ int main()
                 break;
             }
         }
-        k = n;
+        if(j == n) k = n;
+        // k = n;
         if (allocated[i] == false)
         {
             cout << "Process " << i + 1 << " is not allocated" << endl;
