@@ -37,11 +37,12 @@ int main()
                 cout << "Process " << i + 1 << " is allocated to block " << j + 1 << endl;
                 free[j] -= process[i];
                 allocated[i] = true;
-                k = j+1;
+                k = j + 1;
                 break;
             }
         }
-        if(j == n) k = n;
+        if (j == n)
+            k = n;
         // k = n;
         if (allocated[i] == false)
         {
